@@ -24,8 +24,8 @@ public class TestVod {
     public static void main(String[] args) throws Exception{
 
         //本地文件上传
-        String accessKeyId="LTAI4G5KjrtC7PqVSkkLdyQY";
-        String accessKeySecret="wWbyqOgHZHrBbQ6Tp9Qjo3YzlYEAJC";
+        String accessKeyId="";
+        String accessKeySecret="";
         String title = "6 - What If I Want to Move Faster - upload by sdk";   //上传之后文件名称
         String fileName = "C:\\Users\\ROOT\\Desktop\\6 - What If I Want to Move Faster.mp4";  //本地文件路径和名称
         UploadVideoRequest request = new UploadVideoRequest(accessKeyId, accessKeySecret, title, fileName);
@@ -51,7 +51,7 @@ public class TestVod {
 
     public static void getPlayUrl() throws Exception{
         //1.创建初始化对象
-        DefaultAcsClient client = initVodClient("LTAI4G5KjrtC7PqVSkkLdyQY", "wWbyqOgHZHrBbQ6Tp9Qjo3YzlYEAJC");
+        DefaultAcsClient client = initVodClient("", "");
         //2.获取request对象和response对象
         GetPlayInfoResponse response = new GetPlayInfoResponse();
         GetPlayInfoRequest request=new GetPlayInfoRequest();
@@ -76,7 +76,7 @@ public class TestVod {
     //根据视频id播放视频
     public static void getPalyAuth()throws Exception{
         //根据视频id获取播放凭证
-        DefaultAcsClient client = InitObject.initVodClient("LTAI4G5KjrtC7PqVSkkLdyQY", "wWbyqOgHZHrBbQ6Tp9Qjo3YzlYEAJC");
+        DefaultAcsClient client = InitObject.initVodClient("", "");
         GetVideoPlayAuthRequest request=new GetVideoPlayAuthRequest();
         GetVideoPlayAuthResponse response=new GetVideoPlayAuthResponse();
         request.setVideoId("440d658963dc49dda7e1db35864a8d3f");
