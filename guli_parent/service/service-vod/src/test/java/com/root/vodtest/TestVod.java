@@ -56,7 +56,7 @@ public class TestVod {
         GetPlayInfoResponse response = new GetPlayInfoResponse();
         GetPlayInfoRequest request=new GetPlayInfoRequest();
         //3.在request对象中设置id值
-        request.setVideoId("4f82f21fc8f442669a3adb26c8186474");
+        request.setVideoId("");
         //4.调用初始化对象里面的方法传递resuest，获取值
         response = client.getAcsResponse(request);
         try {
